@@ -40,19 +40,10 @@ jobs:
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.APP_SERVER_IP }}
-          username: ubuntu
+          username: master_rrjuckhafk
           key: ${{ secrets.APP_SERVER_PK }}
           port: 22
           script: |
             ls -la
             echo "ssh test"
-            ifconfig
-      
-      
-      - name: ls -a via ssh
-        uses: garygrossgarten/github-action-ssh@release
-        with:
-          command: ls -a /
-          host: ${{ secrets.APP_SERVER_IP }}
-          username: ubuntu
-          privateKey: ${{ secrets.APP_SERVER_PK }}    
+            ifconfig 
