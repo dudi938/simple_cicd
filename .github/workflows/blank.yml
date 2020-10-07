@@ -33,7 +33,19 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+          
+          
       # deploy the app
+      - name: executing remote ssh commands using ssh key
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.APP_SERVER_IP }}
+          username: devops
+          key: ${{ secrets.APP_SERVER_PK }}
+          port: 22
+          script: whoami
+      
+      
       - name: ls -a via ssh
         uses: garygrossgarten/github-action-ssh@release
         with:
