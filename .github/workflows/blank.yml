@@ -40,7 +40,7 @@ jobs:
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.APP_SERVER_IP }}
-          username: devops
+          username: ubuntu
           key: ${{ secrets.APP_SERVER_PK }}
           port: 22
           script: whoami
@@ -51,5 +51,5 @@ jobs:
         with:
           command: ls -a
           host: ${{ secrets.APP_SERVER_IP }}
-          username: devops
+          username: ubuntu
           privateKey: ${{ secrets.APP_SERVER_PK }}    
