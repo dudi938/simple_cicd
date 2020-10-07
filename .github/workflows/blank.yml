@@ -33,3 +33,11 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+      # deploy the app
+      - name: ls -a via ssh
+        uses: garygrossgarten/github-action-ssh@release
+        with:
+          command: ls -a
+          host: ${{ secrets.APP_SERVER_IP }}
+          username: devops
+          privateKey: ${{ secrets.APP_SERVER_PK }}    
