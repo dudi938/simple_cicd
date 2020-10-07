@@ -40,7 +40,8 @@ jobs:
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.APP_SERVER_IP }}
-          username: master_rrjuckhafk
+          #username: master_rrjuckhafk
+          username: dudi
           key: ${{ secrets.APP_SERVER_PK }}
           port: 22
           script: |
