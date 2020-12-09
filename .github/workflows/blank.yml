@@ -33,6 +33,13 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+          echo "Status before"
+          ls -la
+          git status
+          git branch
+          echo "Status after"
+          makdir ./bin
+          echo "hello world" >> ./bin/app.js
           ls -la
           git status
           git branch
