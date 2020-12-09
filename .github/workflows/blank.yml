@@ -40,7 +40,7 @@ jobs:
           mkdir ./bin
           
           
-          echo "hello world" >> ./bin/app.js
+          echo "hello world2 ${{ github.GITHUB_RUN_NUMBER }}" >> ./bin/app.js
           ls -la
           git status
           git branch
