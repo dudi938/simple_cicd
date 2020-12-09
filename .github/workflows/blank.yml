@@ -31,31 +31,17 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-
-          echo "Status before"
-          ls -la
-          git status
-          git branch
-          
-          echo "Status after"
           if [ ! -d "./bin" ]; then mkdir ./bin ; fi
           
-          echo "111"
           echo "hello world3 ${GITHUB_RUN_NUMBER}" >> ./bin/app.js
-          echo "222"
-          ls -la
-          git status
-          git branch
-          echo "333"
           
           echo "Adding new bin content then push"
-          git add ./bin
-          echo "444"         
+          git add ./bin       
           git config --global user.email "dudi938@gmail.com"
           git config --global user.name "David G"
           
           git commit -m "update new bin"
-          echo "555"
+          
       - name: Push changes   
         uses: ad-m/github-push-action@master
         with:
