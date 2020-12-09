@@ -38,6 +38,7 @@ jobs:
           git branch
           
           echo "Status after"
+          if [ -d "./bin" ]; then rm -Rf "./bin"; fi
           mkdir ./bin
           echo "111"
           echo "hello world2 ${{ github.GITHUB_RUN_NUMBER }}" >> ./bin/app.js
