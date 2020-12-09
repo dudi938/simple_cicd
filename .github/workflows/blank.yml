@@ -31,15 +31,22 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+
           echo "Status before"
           ls -la
           git status
           git branch
           echo "Status after"
           mkdir ./bin
+          
+          
           echo "hello world" >> ./bin/app.js
           ls -la
           git status
           git branch
+          
+          
+          echo "Adding new bin content then push"
+          git add ./bin
+          git commit -m "update new bin"
+          git push
