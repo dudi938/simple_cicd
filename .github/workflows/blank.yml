@@ -43,6 +43,7 @@ jobs:
           echo "111"
           echo "try 1 ${{ github.GITHUB_RUN_NUMBER }}"
           echo "try 2 ${{ env.GITHUB_RUN_NUMBER }}"
+          echo "try 2 ${env.GITHUB_RUN_NUMBER}"
           echo "hello world3 ${{ github.GITHUB_RUN_NUMBER }}" >> ./bin/app.js
           echo "222"
           ls -la
