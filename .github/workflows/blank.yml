@@ -36,17 +36,19 @@ jobs:
           ls -la
           git status
           git branch
+          
           echo "Status after"
           mkdir ./bin
-          
-          
+          echo "111"
           echo "hello world2 ${{ github.GITHUB_RUN_NUMBER }}" >> ./bin/app.js
+          echo "222"
           ls -la
           git status
           git branch
-          
+          echo "333"
           
           echo "Adding new bin content then push"
           git add ./bin
           git commit -m "update new bin"
+          echo "444"
           git push
