@@ -38,7 +38,7 @@ jobs:
           git status
           git branch
           echo "Status after"
-          makdir ./bin
+          mkdir ./bin
           echo "hello world" >> ./bin/app.js
           ls -la
           git status
